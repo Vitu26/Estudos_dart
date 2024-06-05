@@ -1,8 +1,18 @@
-class Animal {
+abstract class Animal {
   String? tamanho;
-  int? idade;
+  final int idade;
+  final String nome;
+  int? baseIdadeHumana;
+
+  Animal({
+    required this.tamanho,
+    required this.idade,
+    required this.nome,
+  });
 
   int recuperarIdade() {
-    return idade ?? 0;
+    return idade;
   }
+
+  int calcularIdadeHumana();
 }
